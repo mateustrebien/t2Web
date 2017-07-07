@@ -1,0 +1,853 @@
+/* CSS declarations go here */
+
+/*Estilo para o background do elemento Jumbotron*/
+.hero {
+    width:auto;
+    background-image: url('../img/b32.png');
+    background-repeat: repeat;
+}
+
+.jumbotron h1 {
+    font-family: 'Basic', sans-serif;
+    font-weight: bold;
+    display: inline;
+}
+.jumbotron p {
+    font-family: 'Basic', sans-serif;
+    font-weight: bold;
+}
+
+/*------------------------------------------------------*/
+  
+
+
+body {
+   background-image: url("../img/b33.png");
+   background-repeat: repeat;
+   font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+}
+
+strong { font-weight: 500; }
+
+h1 {
+	margin-top: 10px;
+	font-size: 40px;
+    font-weight: 200;
+    color: #000;
+    line-height: 50px;
+}
+
+h2 {
+	margin-top: 10px;
+	font-size: 26px;
+    font-weight: 100;
+    color: #555;
+    line-height: 50px;
+}
+
+h3 {
+	font-size: 22px;
+    font-weight: 300;
+    color: #555;
+    line-height: 30px;
+}
+
+img { max-width: 100%; }
+
+.btn-lg .btn-block h1{
+    color: black;
+}
+
+.fadeInUp h1, .fadeInDown h1{
+    font-size: 22px;
+    color: #000;
+}
+
+.alertas h1{
+     font-size: 22px;
+    color: #000;
+}
+
+/*Estilo para paginas de login e cadastro */
+
+.inner-bg {
+    padding: 10px 0 170px 0;
+}
+
+.top-content .text {
+	color: #fff;
+}
+
+.top-content .text h1 { color: #555; }
+
+/*-----------------------------------------------*/
+
+
+/*Estilo para os Formularios usados tanto no login/cadastro como tambem nas abas de conteudo*/
+
+.form-box {
+	margin-top: 35px;
+}
+
+.form-top {
+	overflow: hidden;
+	padding: 0 25px 15px 25px;
+	background: #444;
+	background: rgba(0, 0, 0, 0.35);
+	-moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 15px 15px 0 0;
+	text-align: left;
+}
+
+.form-top-left {
+	float: left;
+	width: 75%;
+	padding-top: 25px;
+}
+
+.form-top-left h3 { margin-top: 0; color: #fff; }
+.form-top-left p { opacity: 0.8; color: #fff; }
+
+.form-top-right {
+	float: left;
+	width: 25%;
+	padding-top: 5px;
+	font-size: 66px;
+	color: #fff;
+	line-height: 100px;
+	text-align: right;
+	opacity: 0.3;
+    margin-top: 20px;
+}
+
+
+.form-bottom {
+	padding: 25px 25px 30px 25px;
+	background: #444;
+	background: rgba(0, 0, 0, 0.3);
+	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 15px 15px;
+	text-align: left;
+}
+
+.form-bottom form textarea {
+	height: 100px;
+}
+
+.form-bottom form button.btn {
+	width: 100%;
+}
+
+.form-bottom form .input-error {
+	border-color: #de615e;
+}
+
+.Reg {
+    margin-top: 15px;
+}
+
+.vReg {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+input:invalid:focus { border: 1px solid red; }
+input:valid:focus { border: 1px solid green; }
+
+container top-content container row col-sm-6 col-sm-offset-3 form-box form-bottom btn tipoCadastro:hover{
+	background: #000;
+}
+
+.col-sm-8 col-sm-offset-2 h1 {
+   color: #000;         
+}
+
+/*-------------------------------------------------------------------------------*/
+    
+
+/*Estilo para o Rodape da Pagina Inicial (Login/Cadastro)*/
+
+footer {
+	padding: 60px 0 35px 0;
+	background: #f8f8f8;
+	text-align: left;
+	-moz-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+	-webkit-box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+	box-shadow: 0 5px 15px 0 rgba(0,0,0,.05) inset;
+}
+
+
+footer h3 { margin-top: 0; }
+
+.footer-contact-info p { word-wrap: break-word; }
+.footer-contact-info i { padding-right: 10px; font-size: 18px; color: #ccc; vertical-align: text-top; }
+
+.footer-copyright {
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px dashed #ccc;
+}
+
+.footer-menu {
+	margin-top: 30px;
+	padding-top: 30px;
+	border-top: 1px dashed #ccc;
+	text-align: right;
+}
+.footer-menu ul { margin: 0; padding: 0; list-style: none; }
+.footer-menu li { display: inline; margin-left: 20px; }
+.footer-menu a, .footer-menu a:hover, .footer-menu a:focus { color: #888; border-color: #888; }
+
+/*-------------------------------------------------------------------------------------------------*/
+
+
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #deeff7;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+ }
+
+/*Estilo para o Menu NavBar*/
+
+.navbar-nav > li > .dropdown-menu { background-color: #444; }
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background-image:none !important;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background-color:#149ce0;
+}
+
+/*-----------------------------------------------------------------------*/
+
+
+/*Estilo usado na Section Professores*/
+.caption h3 {
+    width:100%;
+    padding: 12px;
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	#text-shadow: 0.5px 0.5px 0.5px #000;
+}
+/*-------------------------------------------------------------------------*/
+
+
+/*Estilo usado nas chamadas javascript/jquery para exibicao somente dos objetos da section selecionada*/
+
+.CADASTRO{
+    display: block;
+}
+
+.LOGIN{
+    display: block;
+}
+
+.CALENDARIO{
+    display:block;
+}
+
+.HOME {
+    display: block;
+}
+
+.HORARIO{
+    display: block;
+    margin-top: 40px;
+}
+
+.NOTAS{
+    display:block;
+    margin-top: 40px;
+}
+
+.CONTATO{
+    display: block;
+}
+
+.FREQUENCIA{
+    display: block;
+    margin-top: 40px;
+}
+
+.PROFESSOR {
+    margin-top: 20px;
+    background-image: url("../img/b33.png");
+    background-repeat: repeat;
+    display: block;
+}
+
+.PROFESSOR .thumbnail {
+    background-image: url("../img/b33.png");
+    background-repeat: repeat;
+    box-shadow: 2px 2px 2px 3px #444;
+}
+
+
+/*------------------------------------------------*/
+
+.collapse p{
+    font-weight: bold;
+}
+
+/*Estilo para Section Home*/
+
+.status {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.status .panel-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    color: #000;
+    line-height: 45px;
+    padding-top: 20px;
+    letter-spacing: -0.8px;
+}
+
+.event-list {
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.event-list > li {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(51, 51, 51);
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+    padding: 0px;
+    margin: 0px 0px 20px;
+}
+.event-list > li > time {
+    display: inline-block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(197, 44, 102);
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.event-list > li:nth-child(even) > time {
+    background-color: rgb(165, 82, 167);
+}
+.event-list > li > time > span {
+    display: none;
+}
+.event-list > li > time > .day {
+    display: block;
+    font-size: 40pt;
+    font-weight: 100;
+    line-height: 1;
+}
+.event-list > li time > .month {
+    display: block;
+    font-size: 18pt;
+    font-weight: 500;
+    line-height: 1;
+}
+.event-list > li time > .year {
+    display: block;
+    font-size: 24pt;
+    font-weight: 500;
+    line-height: 1;
+}
+.event-list > li > .info {
+    padding-top: 5px;
+    text-align: center;
+}
+.event-list > li > .info > .title {
+    font-size: 17pt;
+    font-weight: 700;
+    margin: 0px;
+}
+.event-list > li > .info > .desc {
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 0px;
+}
+
+/*era 768*/
+@media (min-width: 768px) {
+    .event-list > li {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 120px;
+        padding: 0px;
+    }
+    .event-list > li > time,
+    .event-list > li > img  {
+        display: inline-block;
+    }
+    .event-list > li > time,
+    .event-list > li > img {
+        width: 120px;
+        float: left;
+    }
+    .event-list > li > .info {
+        background-color: rgb(245, 245, 245);
+        overflow: hidden;
+    }
+    .event-list > li > time,
+    .event-list > li > img {
+        width: 120px;
+        height: 120px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .event-list > li > .info {
+        position: relative;
+        height: 120px;
+        text-align: left;
+        padding-right: 40px;
+    }	
+    .event-list > li > .info > .title, 
+    .event-list > li > .info > .desc {
+        padding: 0px 10px;
+    }
+}
+
+
+
+@media (max-width: 1138px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+
+
+/*-------------------------------------------------------------*/
+
+/*Estilo para Section Notas */
+
+.popover-content {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.block-3{
+	background-color: #3498DB; 
+}
+
+.item{
+	min-height: 325px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.item .block{
+	width: 100%;
+	float: left;
+	color: #FFF;
+	min-height: 200px;
+	text-align: center;
+	padding: 15px;
+	margin-bottom: 20px;
+	box-shadow: 1px 2px 3px #444;
+}
+
+
+.item h1{
+	width:100%;
+	padding: 15px;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 2px 2px 2px #555;
+    color: #FFF;
+}
+
+.item h3{
+	width: 100%;
+	padding: 5px;
+	font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+	font-weight: 900;
+	text-align: center;
+}
+/*-----------------------------------*/
+
+
+/*Usado para formulario na Section Contato*/
+.form-area {
+    background-color: #FAFAFA;
+    box-shadow: 1px 2px 3px #444;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.form-area h3{
+	width: 100%;
+	padding: 15px;
+	font-size: 30px;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 2px 2px 2px #555;
+}
+
+/*-------------------------------------------*/
+
+/*Estilo para pagina Frequencia */
+.features{
+    #box-shadow: 1px 2px 3px #444;
+    #background: #c23c5a;
+    #background: rgba(255, 255, 255, 0.2);
+    background-image: url("../img/b33.png");
+    background-repeat: repeat;
+    margin-top: 20px;
+    border-radius: 4px 4px 4px 4px;
+}
+.features .single {
+    background: #c23c5a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    padding: 40px 20px;
+    margin: 50px auto 80px auto;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out; 
+}
+.features .single h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 60px; 
+}
+.features .single h2:after {
+    content: '';
+    width: 80px;
+    height: 5px;
+    margin: 20px auto;
+    display: block;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.features .single p{
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 24px;
+}
+.features .single .icon-outer {
+    position: absolute;
+    background: #c23c5a;
+    width: 100px;
+    height: 100px;
+    #background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0;
+    margin-top: -50px;
+    left: 50%;
+    margin-left: -50px;
+    -webkit-transition: 0.4s ease-in-out;
+    -moz-transition: 0.4s ease-in-out;
+    -ms-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out; 
+}
+.features .single .icon-outer .icon {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 60px;
+    height: 60px;
+    margin: 20px auto; 
+}
+.features .single .icon-outer .icon i {
+    line-height: 60px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    color: #fff;
+    font-size: 20px; 
+}
+.features .single:hover {
+    #background: #243c4f; 
+}
+.features .single:hover h2 {
+    color: #fff; 
+}
+.features .single:hover h2:after {
+    border-color: rgba(255, 255, 255, 0.3); 
+}
+.features .single:hover p {
+    color: rgba(255, 255, 255, 0.8);   
+}
+
+.features .single:hover .icon-outer {
+    border-color: rgba(255, 255, 255, 0.2);
+    margin-top: -60px; 
+}
+.features .single:hover .icon-outer .icon {
+    border-color: rgba(255, 255, 255, 0.2); 
+}
+.features .single:hover .icon-outer .icon i {
+    color: white; 
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.clickable .glyphicon{
+    background: rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px
+}
+a.clickable { color: inherit; }
+a.clickable:hover { text-decoration:none; }
+
+/*Fim Estilo da pagina Frequencia */
+
+
+/* Usado na Pagina Notas*/
+.list-group a {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+
+
+/*Inicio do Estilo para o Carousel da Section Calendario*/
+
+.carousel-control.left{
+    background: none;
+}
+.carousel-control.right{
+    background: none;
+}
+
+.carousel-control{
+    position: absolute;
+    top: 45%;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: auto;
+    color: #fff;
+    text-align: center;
+    opacity: 1;
+    text-shadow: none;
+}
+.carousel-control:hover{
+    color: #000;
+}
+.carousel-indicators{
+    bottom: -50px;
+}
+.carousel-indicators li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #16a085;
+    border-radius: 50%;
+}
+.carousel-indicators .active{
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #16a085;
+}
+.carousel-caption{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+}
+
+
+/* Inicio das Tags para Collapse Professores e Horarios */
+
+.wrap {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+a:focus,
+a:hover,
+a:active {
+  outline: 0;
+  text-decoration: none;
+}
+
+.panel {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  background: none;
+  box-shadow: none;
+}
+
+.panel:last-child {
+  border-bottom: none;
+}
+
+.panel-group > .panel:first-child .panel-heading {
+  border-radius: 4px 4px 0 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-heading {
+  background-color: #009688;
+  border-radius: 0;
+  border: none;
+  color: #fff;
+  padding: 0;
+}
+
+
+.panel-title a {
+  display: block;
+  color: #fff;
+  padding: 15px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.panel-body {
+  background: #fff;
+}
+
+
+.panel:last-child .panel-body {
+  border-radius: 0 0 4px 4px;
+}
+
+.panel:last-child .panel-heading {
+  border-radius: 0 0 4px 4px;
+  transition: border-radius 0.3s linear 0.2s;
+}
+
+.panel:last-child .panel-heading.active {
+  border-radius: 0;
+  transition: border-radius linear 0s;
+}
+/* #bs-collapse icon scale option */
+
+.panel-heading a:before {
+  content: '\e146';
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  font-size: 24px;
+  transition: all 0.5s;
+  transform: scale(1);
+}
+
+.panel-heading.active a:before {
+  content: ' ';
+  transition: all 0.5s;
+  transform: scale(0);
+}
+
+#bs-collapse .panel-heading a:after {
+  content: ' ';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+#bs-collapse .panel-heading.active a:after {
+  content: '\25b2';
+  transform: scale(1);
+  transition: all 0.5s;
+}
+/* #accordion rotate icon option */
+
+#accordion .panel-heading a:before {
+  content: '\25b2';
+  font-size: 24px;
+  position: absolute;
+  font-family: 'Material Icons';
+  right: 5px;
+  top: 10px;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+
+#accordion .panel-heading.active a:before {
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+.panel-heading:focus {
+  background-color: #15665e;
+}
+
+.panel-heading:hover {
+  background-color: #15665e;
+}
+

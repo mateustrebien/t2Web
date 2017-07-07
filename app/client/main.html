@@ -1,0 +1,678 @@
+<head>
+  <title>proj2</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  {{> Template.dynamic template=currentPage}}
+
+</body>
+
+<template name="banner">
+ <!-- Header da Pagina Login/Cadastro--> 
+    <div class="page-header" role="banner">
+        <div class="jumbotron text-center hero">
+            <h1>SchooLINE</h1>
+            <p>Plataforma Web de controle e de desempenho escolar</p> 
+        </div>
+    </div> 
+    <!--Fim do Header--> 
+</template>
+
+<template name="login" class="LOGIN">
+      <div style="padding: 25px 25px 30px 25px">
+      {{> loginButtons}}
+      </div>
+      {{> banner}}
+      <!-- Section para conteudo de Login-->     
+      <div class="container">
+          <div class="top-content">     
+              <div class="inner-bg">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-sm-8 col-sm-offset-2 text">
+                              <h1>Bem-Vindo ao <strong>SchooLINE</strong></h1>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-6 col-sm-offset-3 form-box">
+                              <div class="form-top">
+                                  <div class="form-top-left">
+                                      <h3>Faça o Login para acessar o sistema</h3>
+                                      <p>Entre com a matrícula e a sua senha:</p>
+                                  </div>
+                                  <div class="form-top-right">
+                                <i class="glyphicon glyphicon-lock"></i>
+                              </div>
+                              </div>
+                              <div class="form-bottom">
+                                  <form role="form" action="" method="post" class="login-form" data-toggle="validator">
+                                      <fieldset>
+                                          <legend class="sr-only">Formulario de Login</legend>
+                                          <div class="form-group">
+                                              <label class="sr-only" for="form-username" id="form-matricula">Matricula</label>
+                                              <input type="number" name="matricula" placeholder="Matrícula..." class="form-username form-control" data-error="Por favor, informe somente números" id="matricula" required pattern="[^0-9]+">
+                                              <div class="help-block with-errors" style="color: #FFF"></div>
+                                              
+                                          </div>
+                                          <div class="form-group">
+                                              <label class="sr-only" for="form-password">Senha</label>
+                                              <input type="password" name="form-password" placeholder="Senha..." class="form-password form-control" id="form-password" required>
+                                          </div>
+                                      </fieldset>
+                                      <button type="submit" class="btn btn-success clickChangesPage" data-loading-text="Loading..." autocomplete="off" id="btLogon" data-page='home'>Logar</button>
+                                      <button type="button" class="btn btn-danger clickChangesPage" id="btCadastro" data-page='cadastro' style="margin-top: 4px;">Faça seu Cadastro</button>                            
+                                      <input type="submit" id="btnSubmitForm" value="enviar" style="visibility:hidden;"/>
+
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>     
+          </div>
+          {{> rodape}}
+</template>
+
+
+
+
+<template name="cadastro">
+    <!-- Section para conteudo de Cadastro--> 
+    {{> banner}}
+    <section class="CADASTRO"> 
+        <div class="container">
+            <div class="top-content">     
+                <div class="inner-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3 form-box">
+                                <div class="form-top">
+                                    <div class="form-top-left">
+                                        <h3>Faça seu Registro</h3>
+                                        <p>Entre com seus dados completos</p>
+                                    </div>
+                                    <div class="form-top-right">
+                                       <i class="glyphicon glyphicon-log-in" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="form-bottom">
+                                    <form role="form" action="" method="post" class="login-form" data-toggle="validator">
+                                        <fieldset>
+                                            <legend class="sr-only">Formulario de Cadastro</legend>
+                                            <div class="form-group">
+                                                <label class="sr-only" for="nome">Nome</label>
+                                                <input type="text" name="nome" placeholder="Digite seu nome..." class="form-username form-control" id="nome" required title="Preencha seu nome">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="sobrenome">Sobrenome</label>
+                                                <input type="text" name="sobrenome" placeholder="Digite seu sobrenome..." class="form-username form-control" id="sobrenome" required title="Preencha seu sobrenome.">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="matricula">Matricula</label>
+                                                <input type="number" name="matricula" placeholder="Digite sua matrícula..." class="form-username form-control" data-error="Por favor, informe somente números" id="matricula" required pattern="[^0-9]+" title="Preencha sua matrícula.">
+                                                <div class="help-block with-errors" style="color: #FFF"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="email">Email</label>
+                                                <input type="email" name="email" placeholder="Digite seu email..." data-error="Por favor, informe um e-mail válido" class="form-password form-control" id="email" required>
+                                                <div class="help-block with-errors" style="color: #FFF"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="sr-only" for="senha">Senha</label>
+                                                <input type="password" name="senha" placeholder="Digite sua senha..." class="form-password form-control" id="senha" required>
+                                            </div>
+                                        </fieldset>
+                                        <button type="submit" class="btn btn-success Reg" data-loading-text="Registrando..." autocomplete="off" id="btRegistrar">Registrar</button>
+                                        <button type="button" class="btn btn-danger edt clickChangesPage" id="btVoltar" data-page='login' style="margin-top: 4px;">Voltar</button>      
+                                        <input type="submit" id="btnSubmitForm" value="enviar" style="visibility:hidden;"/>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </section> 
+    <!-- Section para conteudo de Cadastro-->  
+     {{> rodape}}
+</template>
+
+
+
+
+<template name="rodape">
+<!-- Footer da Pagina de Login/Cadastro -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 footer-about wow fadeInUp">
+                    <h1>Sobre o SchooLine</h1>
+                    <p>
+                        Sistema Web Responsivo desenvolvido na componente curricular optativa de Tópicos Especiais em Desenvolvimento Web do curso de Ciência da Computação, da
+                        Universidade Federal da Fronteira Sul.
+                    </p>
+                </div>
+                <div class="col-sm-6 footer-contact-info wow fadeInDown">
+                    <h1>Informações de Contato</h1>
+                    <p><i class="glyphicon glyphicon-map-marker"></i> Av. Getúlio Vargas, 10136 Chapecó - Santa Catarina - Brasil</p>
+                    <p><i class="glyphicon glyphicon-phone"></i> Fone: (049) 99999-9999</p>
+                    <p><i class="glyphicon glyphicon-envelope"></i> Email: <a href="mailto:mateust92@gmail.com">mateust92@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 footer-copyright">
+                    &copy; SchooLINE 2017 
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim do Footer da Pagina Home -->
+</template>
+
+
+<template name="home">
+  {{> menu}}
+  {{> dadosHome}}
+  {{> sobre}}
+  {{> sair}}
+  {{> rodape}}
+</template>
+
+
+
+<template name="dadosHome">
+  <div class="alert alert-success alertas" role="alert" tabindex="55"><h1><span class="glyphicon glyphicon-thumbs-up" tabindex="56"></span><strong>  Fique tranquilo, o desempenho do aluno até o momento é satisfatório.</strong></h1></div>
+
+            <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success btn-lg btn-block" role="label" tabindex="57"><h1 tabindex="58"><strong>7.5</strong></h1></a>
+                            <a class="btn btn-default btn-lg btn-block" role="label" tabindex="59"><h1 tabindex="60" role="label">Média Global</h1></a>
+                        </div> 
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-warning btn-lg btn-block" role="label" tabindex="61"><h1 tabindex="62"><strong>78%</strong></h1></a>
+                            <a class="btn btn-default btn-lg btn-block" role="label" tabindex="63"><h1 tabindex="64">Frequência Global</h1></a>
+                        </div>  
+                    </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                  <div class="col-xs-12 col-sm-offset-2 col-sm-8" style="margin-top: 40px;">
+                      <h1><strong>EVENTOS DO MÊS:</strong></h1>
+                          <ul class="event-list">
+                            {{#each listaEventos}}
+                              <li>
+                                <time datetime={{datetime}}>
+                                  <span class="day">{{dia}}</span>
+                                  <span class="month">{{mes}}</span>
+                                  <span class="year">{{ano}}</span>
+                                  <span class="time">{{time}}</span>
+                                </time>
+                                <div class="info">
+                                  <h2 class="title">{{title}}</h2>
+                                  <p class="desc">{{desc}}</p>
+                                </div>
+                              </li>
+                            {{/each}}
+                    </ul>
+                      </div>
+                  </div>
+            </div>
+
+</template>
+
+
+ <template name="menu">
+    <!--Inicio da Section Menu NavBar-->
+    <section class="MENU"> 
+    <nav class="navbar navbar-inverse">
+                  <div class="container-fluid">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                      </button>
+                      <a class="navbar-brand" href="#">SchooLINE</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#" id="itHome" class="clickChangesPage" data-page='home'><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li><a href="#" id="itNotas" class="clickChangesPage" data-page='notas'><span class="glyphicon glyphicon-tag"></span> Notas</a></li>
+                        <li><a href="#" id="itFreq" class="clickChangesPage" data-page='frequencia'><span class="glyphicon glyphicon-stats"></span> Frequência</a></li>
+                        <li><a href="#" id="itHor" class="clickChangesPage" data-page='horarios'><span class="glyphicon glyphicon-dashboard"></span> Horários</a></li>
+                        <li><a href="#" id="itCal" class="clickChangesPage" data-page='calendario'><span class="glyphicon glyphicon-calendar"></span> Calendário</a></li>
+                           <li class="dropdown"> <a href="#" class="dropdown-toggle men" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="profe"> <span class="glyphicon glyphicon-user"></span> Professores <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#P1" aria-controls="home" role="tab" data-toggle="tab" id="p1" style="color: white;"><span class="glyphicon glyphicon-user"></span> Professor 1</a></li>
+                                <li><a href="#P2" aria-controls="home" role="tab" data-toggle="tab" id="p2" style="color: white;"><span class="glyphicon glyphicon-user"></span> Professor 2</a></li>
+                             </ul>
+                          </li>
+                        <li><a href="#" id="itCont" class="clickChangesPage" data-page='contato'><span class="glyphicon glyphicon-send"></span> Contato</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-info-sign"></span> Sobre</a></li>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#" id="itSair" data-toggle="modal" data-target="#confirm-submit"><span class="glyphicon glyphicon-log-out"></span> Sair</a></li>
+                      </ul>
+                    </div>
+                  </div>
+            </nav>
+    </section>
+</template>
+
+<template name="notas">
+  {{> menu}}
+  <section class="NOTAS">
+    <div class="container">
+          <div class="row">
+            <div class="item">
+            {{#each listaNotas}}
+                <div class="col-xs-12 col-sm-6 col-lg-3">
+                    <div class="block block-3">
+                        <h1>{{materia}}</h1>
+                        <div class="list-group">
+                            <a type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P1" data-content={{n1}} data-trigger="hover" tabindex="17" id="Prova1B"><span class="glyphicon glyphicon-edit"></span> Prova 1</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P2" data-content={{n2}} data-trigger="hover" tabindex="18" id="Prova2B"><span class="glyphicon glyphicon-edit"></span> Prova 2</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P3" data-content={{n3}} data-trigger="hover" tabindex="19" id="Prova3B"><span class="glyphicon glyphicon-edit"></span> Prova 3</a>
+                            <a  type="button" class="btn btn-primary list-group-item" data-toggle="popover" title="Nota P4" data-content={{n4}} data-trigger="hover" tabindex="20" id="Prova4B"><span class="glyphicon glyphicon-edit"></span> Prova 4</a>
+                            <div class="alert alert-info" role="alert"><p> Média Final: {{media}}</p></div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    </section>
+    {{> sobre}}
+    {{> sair}}
+  {{> rodape}}
+</template>
+
+<template name="frequencia">
+  {{> menu}}
+
+  <section class="FREQUENCIA">
+        <div class="container">
+        <div class="tab-content">
+            <div class="row features">
+              {{#each listaFreq}}
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="single" role="tableHours" tabindex="1" id="div1">
+                        <div class="icon-outer" id="div12">
+                            <div class="icon">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            </div>
+                        </div>
+                        <h2>{{materia}}</h2>
+                        <div class="col-lg-12">
+                            <div id={{id}} tabindex="2"></div>
+                        </div>
+                        <p>Porcentagem de presença na disciplina até o momento.</p>
+                    </div>
+                </div>    
+                {{/each}}
+            </div>
+            </div>
+        </div>
+
+    </section>     
+    {{> sobre}}
+    {{> sair}}
+   {{> rodape}}
+</template>
+
+<template name="horarios">
+  {{> menu}}
+
+    <div class="container">
+        <div class="row">
+        {{#each listaHor}}
+        <div class="col-md-12 col-sm-12">
+            <h1><strong>{{dia}}</strong></h1>
+                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id={{idh1}}>
+                      <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href={{href1}} aria-expanded="false" aria-controls={{ach1}}>
+                      07:30
+                    </a>
+                  </h4>
+                    </div>
+                    <div id={{ach1}} class="panel-collapse collapse" role="tabpanel" aria-labelledby={{idh1}}>
+                      <div class="panel-body">
+                         {{h1}}  
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id={{idh2}}>
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href={{href2}} aria-expanded="false" aria-controls={{ach2}}>
+                      08:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id={{ach2}} class="panel-collapse collapse" role="tabpanel" aria-labelledby={{idh2}}>
+                      <div class="panel-body">
+                         {{h2}}
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id={{idh3}}>
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href={{href3}} aria-expanded="false" aria-controls={{ach3}}>
+                      09:10
+                    </a>
+                  </h4>
+                    </div>
+                    <div id={{ach3}} class="panel-collapse collapse" role="tabpanel" aria-labelledby={{idh3}}>
+                      <div class="panel-body">
+                        {{h3}}
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id={{idh4}}>
+                      <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href={{href4}} aria-expanded="false" aria-controls={{ach4}}>
+                      10:20
+                    </a>
+                  </h4>
+                    </div>
+                    <div id={{ach4}} class="panel-collapse collapse" role="tabpanel" aria-labelledby={{idh4}}>
+                      <div class="panel-body">
+                        {{h4}}
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end of panel -->
+
+                    <div class="panel">
+                        <div class="panel-heading" role="tab" id={{idh5}}>
+                          <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href={{href5}} aria-expanded="false" aria-controls={{ach5}}>
+                          11:10
+                        </a>
+                      </h4>
+                        </div>
+                        <div id={{ach5}} class="panel-collapse collapse" role="tabpanel" aria-labelledby={{idh5}}>
+                          <div class="panel-body">
+                            {{h5}}
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of panel -->    
+
+                </div>
+                <!-- end of #accordion -->
+              </div>    
+              {{/each}}
+        </div> <!--Fecha row -->
+        </div> <!--Fecha Container -->
+
+    {{> sobre}}
+    {{> sair}}
+  {{> rodape}}
+</template>
+
+<template name="calendario">
+  {{> menu}}
+         <section class="CALENDARIO">   
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-sm-offset-0"> 
+                 <!-- Indicators -->
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        {{#each listaCal}}
+                        <div class={{class}}>
+                            <img src={{src}} alt={{alt}}>
+                            <div class="carousel-caption">
+                                <h3>{{mes}}</h3>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                        <li data-target="#myCarousel" data-slide-to="5"></li>
+                        <li data-target="#myCarousel" data-slide-to="6"></li>
+                        <li data-target="#myCarousel" data-slide-to="7"></li>
+                        <li data-target="#myCarousel" data-slide-to="8"></li>
+                        <li data-target="#myCarousel" data-slide-to="9"></li>
+                        <li data-target="#myCarousel" data-slide-to="10"></li>
+                    </ol>
+                </div>   
+              </div>
+            </div>
+        </div>
+    </section>  
+  {{> sobre}}
+  {{> sair}}
+  {{> rodape}}
+</template>
+
+<template name="contato">
+  {{> menu}}
+    <section class="CONTATO">
+       <div class="container">
+           <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div class="form-area">  
+                        <form role="form" data-toggle="validator">
+                            <br style="clear:both">
+                            <h1>Contate-nos</h1>
+                            <fieldset>
+                                <legend class="sr-only">Formulario para Contato</legend>
+                                <div class="form-group">
+                                    <label class="sr-only" for="nome" id="contato-nome">Nome</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome..." required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="email" id="contato-email">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" data-error="Por favor, informe um e-mail correto."  placeholder="Email... Ex: meunome@gmail.com" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="fone" id="contato-fone">Telefone</label>
+                                    <input type="tel" class="form-control" id="telefone" name="telefone"  data-error="Por favor, informe um telefone no formato: (49) 99999-9999" placeholder="Telefone... Ex: (49) 99999-9999" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="assunto" id="contato-assunto">Assunto</label>
+                                    <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Digite o assunto..." required>
+                                </div>
+                                <div class="form-group">
+                                <label class="sr-only" for="mensagem" id="contato-mensagem">Mensagem</label>
+                                <textarea class="form-control" type="textarea" id="mensagem" placeholder="Digite sua mensagem..." maxlength="140" rows="7"></textarea>
+                                <span class="help-block"><p id="letras" class="help-block ">Você atingiu o limite de caracteres</p></span>                    
+                                </div>
+                            </fieldset>
+                        <button type="submit" id="btEnviar" name="submit" class="btn btn-primary pull-right" data-loading-text="Enviando..." autocomplete="off">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </section> 
+  {{> sobre}}
+  {{> sair}}
+  {{> layout}}
+  {{> rodape}}
+</template>
+
+<template name="layout">
+  <div class="container">
+    {{#each items}}
+      <div class="item">{{title}}</div>
+    {{/each}}
+  </div>
+</template>
+
+<template name="professores">
+  {{> menu}}
+        <!--Inicio da Section Professores-->
+    <section class="PROFESSOR">  
+        <div class="container">
+            <div class="tab-content">
+                <!-- Primeiro Professor -->   
+                <div role="tabpanel" class="tab-pane" id="P1">
+                  <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3 form-box">
+                         <div class="thumbnail">
+                                <a class="imagem" href="#" data-toggle="modal" data-target="#lightbox"> <img src="../img/1.png" alt="Imagem de perfil do professor"></a>
+                            <div class="caption">
+                              <h1>José</h1>
+                              <h2>Professor da Disciplina de Matemática</h2>
+
+                                <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">  
+                                <div class="panel">
+                                    <div class="panel-heading" role="tab" id="headingP1">
+                                      <h4 class="panel-title">
+                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseP1" aria-expanded="false" aria-controls="collapseP1">
+                                       Informações para Contato
+                                    </a>
+                                  </h4>
+                                    </div>
+                                    <div id="collapseP1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingP1">
+                                      <div class="panel-body">
+                                        <p>Email: joao@gmail.com</p>
+                                        <p>Fone: (49) 99999-9999</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- end of panel -->
+                                    </div>
+                                  <!-- end of wrap -->
+                            </div>
+                          </div>
+                      </div>
+                    </div>  
+                </div>
+                <!-- Segundo Professor -->  
+                <div role="tabpanel" class="tab-pane" id="P2">
+                    <div class="row">
+                      <div class="col-sm-6 col-sm-offset-3 form-box">
+                         <div class="thumbnail">
+                            <div class="imagem">
+                                <a class="imagem" href="#" data-toggle="modal" data-target="#lightbox"> <img src="../img/5.png" alt="Imagem de perfil do professor"></a>
+                             </div>
+                            <div class="caption">
+                              <h1>João</h1>
+                              <h2>Professor da Disciplina de Geografia</h2>
+
+                                    <div class="panel-group wrap" id="accordion" role="tablist" aria-multiselectable="true">  
+                                      <div class="panel">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                          <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                          Informações para Contato
+                                        </a>
+                                      </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                          <div class="panel-body">
+                                            <p>Email: joao@gmail.com</p>
+                                            <p>Fone: (49) 99999-9999</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- end of panel -->
+                                    </div>
+                                  <!-- end of wrap -->
+                            </div>
+                          </div>
+                      </div>  
+                    </div>
+              </div>
+            </div>
+        </div>
+        <div id="lightbox" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="close hidden" data-dismiss="modal" aria-hidden="true">×</button>
+        <div class="modal-content">
+            <div class="modal-body">
+                <img src="" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+    </section>    
+    <!--Final da Section Professores-->
+
+
+  {{> sobre}}
+  {{> sair}}
+  {{> rodape}}
+</template>
+
+<template name="sobre">
+  <!-- Modal Pagina Sobre-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-info-sign"></span> Sobre o SchooLINE</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Sistema Web Responsivo desenvolvido na componente curricular optativa de Tópicos Especiais em Desenvolvimento Web do curso de Ciência da Computação, da
+                        Universidade Federal da Fronteira Sul.
+                   </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="sair">
+      <div class="modal fade" id="confirm-submit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      Deseja realmente deixar o sistema?
+                  </div>
+                  <div class="modal-footer">
+                      <div class="container-fluid">
+                          <div class= "col-sm-12 text-center">
+                              <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
+                              <button type="button" class="btn btn-danger clickChangesPage" data-dismiss="modal" id="reiniciar" data-page='login'>Sair</button>
+                          </div>                                                                                                      
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+</template>

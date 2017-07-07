@@ -1,0 +1,28 @@
+import { Mongo } from 'meteor/mongo';
+Eventos1 = new Mongo.Collection('eventos2');
+
+var array_eventos = [
+	{ 	 
+		datetime: "2017-05-19",
+		dia: 19,
+		mes: "Maio",
+		ano: 2017,
+		time: "Evento1",
+		title: "19 de Maio",
+		desc: "Apresentação....."
+    }
+];
+
+var array_eventos1 = [
+	 { 	 
+		datetime: "2017-05-28",
+		dia: 28,
+		mes: "Maio",
+		ano: 2017,
+		time: "Evento2",
+		title: "28 de Maio",
+		desc: "Reunião..."
+    }
+];
+Eventos1.insert(array_eventos);
+Eventos1.insert(array_eventos1);
